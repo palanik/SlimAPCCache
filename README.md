@@ -19,4 +19,5 @@ $app->get('/foo', function () use ($app) {
     echo "Hello";
 });
 $app->run();
+?>
 ```
