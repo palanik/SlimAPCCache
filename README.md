@@ -1,5 +1,5 @@
-SlimCache
-=========
+SlimApcCache
+============
 
 Cache Middleware for PHP [Slim micro framework](http://www.slimframework.com/) using [apccache](http://www.php.net/manual/en/book.apc.php)
 
@@ -8,9 +8,9 @@ Cache Middleware for PHP [Slim micro framework](http://www.slimframework.com/) u
 <?php
 $app = new \Slim\Slim();
 
-require_once('apccache.php');
+use palanik\slimapccache\SlimApcCache;
 
-$app->add($app->add(new SlimCache(array(
+$app->add($app->add(new SlimApcCache(array(
 			'ttl' => 60,
 			'caching_prefix' => 'myapp_',
 			)));

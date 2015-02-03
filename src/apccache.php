@@ -1,6 +1,6 @@
-<?php
+<?php namespace palanik\slimapccache;
 
-class SlimCache extends \Slim\Middleware {
+class SlimApcCache extends \Slim\Middleware {
 
 	protected $settings;
 

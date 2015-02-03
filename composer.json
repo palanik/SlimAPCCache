@@ -1,0 +1,28 @@
+{
+    "name": "palanik/slimapccache",
+    "description": "Cache Middleware for PHP Slim micro framework using apccache",
+    "keywords": [
+        "slimcache",
+        "slimapccache",
+        "cache",
+        "slimphp",
+        "slim",
+        "apccache"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/palanik/SlimAPCCache",
+    "authors": [
+        {
+            "name": "palanik"
+        }
+    ],
+    "require": {
+        "slim/slim": "2.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "palanik\\slimapccache\\": "src"
+        }
+    }
+}
+
