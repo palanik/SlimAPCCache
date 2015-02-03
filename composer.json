@@ -1,6 +1,8 @@
 {
     "name": "palanik/slimapccache",
     "description": "Cache Middleware for PHP Slim micro framework using apccache",
+    "type": "library",
+    "version": "0.0.1",
     "keywords": [
         "slimcache",
         "slimapccache",
