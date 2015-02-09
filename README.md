@@ -1,5 +1,7 @@
 SlimAPCCache
 ============
+[![Latest Stable Version](https://poser.pugx.org/palanik/slim-apc-cache/v/stable.svg)](https://packagist.org/packages/palanik/slim-apc-cache)
+[![License](https://poser.pugx.org/palanik/slim-apc-cache/license.svg)](https://github.com/palanik/SlimAPCCache/blob/master/LICENSE)
 
 Cache Middleware for PHP [Slim micro framework](http://www.slimframework.com/) using [APC Cache](http://www.php.net/manual/en/book.apc.php)
 
