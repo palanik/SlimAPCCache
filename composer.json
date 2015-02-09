@@ -1,5 +1,5 @@
 {
-    "name": "palanik/SlimAPCCache",
+    "name": "palanik/slim-apc-cache",
     "description": "Cache Middleware for PHP Slim micro framework using APC Cache",
     "type": "library",
     "version": "0.0.2",
