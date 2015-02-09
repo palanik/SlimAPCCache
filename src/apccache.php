@@ -1,18 +1,22 @@
-<?php namespace palanik\slimapccache;
+<?php namespace palanik\SlimAPCCache;
 
-class SlimApcCache extends \Slim\Middleware {
+class SlimAPCCache extends \Slim\Middleware {
 
 	protected $settings;
 
 	public function __construct($settings = array()) {
-		$this->settings = array_merge(array(
-				'ttl' => 300,	// 5 minutes
-				'caching_prefix' => 'SlimCache_'
-				), $settings);
+		if(extension_loaded('apc') && ini_get('apc.enabled')) {
+			$this->settings = array_merge(array(
+					'ttl' => 300,	// 5 minutes
+					'caching_prefix' => 'SlimCache_'
+					), $settings);
+		}
+		else {
+			throw new \Exception('APC not available');
+		}
 	}
 
 	public function call() {
-		
 		$key_name = $this->settings['caching_prefix']. $this->app->request()->getResourceUri();
 		$rsp = $this->app->response();
 		

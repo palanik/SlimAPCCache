@@ -5,29 +5,31 @@ Cache Middleware for PHP [Slim micro framework](http://www.slimframework.com/) u
 
 ## How to Install
 
-Update your `composer.json` to require the `palanik/slimapccache` package.
+Update your `composer.json` to require the `palanik/SlimAPCCache` package.
 Run `composer install` to add SlimAPCCache your vendor folder.
 
     {
         "require": {
-            "palanik/slimapccache": "0.0.1.*"
+            "palanik/SlimAPCCache": "0.0.2.*"
         }
     }
 
 ##How to Use this Middleware
 ```php
 <?php
+require ('./vendor/autoload.php');
+
 $app = new \Slim\Slim();
 
-use palanik\slimapccache\SlimApcCache;
+use palanik\SlimAPCCache\SlimAPCCache;
 
-$app->add($app->add(new SlimApcCache(array(
+$app->add(new SlimAPCCache(array(
 			'ttl' => 60,
 			'caching_prefix' => 'myapp_',
 			)));
 			
 $app->get('/foo', function () use ($app) {
-    echo "Hello";
+    echo "Hello Bar";
 });
 $app->run();
 ?>
